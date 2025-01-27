@@ -22,3 +22,8 @@ class NucleiAnalyzer(ObservableAnalyzer, DockerBasedAnalyzer):
         # Execute the request
         report = self._docker_run(req_data=req_data, req_files=None)
         return report
+
+    @classmethod
+    def _monkeypatch(cls):
+        patches = []
+        return super()._monkeypatch(patches=patches)
